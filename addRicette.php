@@ -17,6 +17,7 @@
     <!-- DA INDICARE A CHI MANDARE I DATI -->
     <form class="" action="insert.php" method="post">
         <input type="text" name="nome" placeholder="Inserisci il nome della ricetta">
+        <input type="text" name="tipo" placeholder="Inserisci il tipo del pasto, colazione, pranzo, cena">
         <input type="text" name="difficolta" placeholder="Difficoltà da 1 a 10">
         <input type="textarea" name="descrizione" placeholder="Descrizione della ricetta">
         <input type="text" name="daservire" placeholder="in che modo va servita (caldo o freddo)">
