@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+
+}
+body{
+  background: radial-gradient(circle, rgba(8,148,196,1) 0%, rgba(226,224,255,1) 47%, rgba(138,235,255,1) 100%);
+
+}
+
+/* INIZIO SEZIONE NAVBAR */
+.navbar {
+    background-color: rgba(70,70,70,0.8);
+    padding-top: 20px;
+    height: 10vh;
+    position: relative;
+  }
+  
+  .navdescription{
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-left: 50px;
+  }
+  
+  .about{
+    position: absolute;
+    right: 100px;  
+  }
+/* FINE SEZIONE NAVBAR */
+
+  .ref{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(0, 57, 92);
+    font-size: 5em;
+    width: 100%;
+    border-radius: 30px;
+
+    
+  }
+
+  .sections > div{
+    padding: 5px;
+    border-radius: 30px;
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 9px 28px 8px rgba(0,0,0,0.68);
+    margin: 3vh;
+    width: calc(100% / 3 - 6vh);
+  }
+
+  .sections{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;  }
+
+  @media (min-width: 651px) and (max-width: 1000px){
+
+    .sections > div{
+      width: calc(100% / 2 - 6vh);
+      
+    }
+
+  }
+
+  @media (max-width: 650px){
+
+    .sections > div{
+      width: 100%;
+    }
+
+    .navdescription{
+      color: white;
+      text-decoration: none;
+      font-size: 2rem;
+      margin-left: 1vw;
+    }
+
+    .about{
+      position: absolute;
+      right: 2vw;  
+    }
+
+  }

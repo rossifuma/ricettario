@@ -1,0 +1,14 @@
+{
+    "nome": "nome ricetta",
+    "difficolta": "da 1 a 10",
+    "descrizione": "descrizione della ricetta",
+    "preparazione": "descrizione della preparazione",
+    "da servire": "caldo o freddo o temperatura ambiente",
+    "ingredienteN": [
+        {
+            "nomeIngr": "sale o pepe o altro",
+            "qta": "espressa nell'unita di misura successiva",
+            "unitaqta": "gr o cl o lt o NULL in caso di qta QB"
+        }
+    ]
+}

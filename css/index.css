@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background-image: url("../img/sfondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  font-family: 'Dancing Script', cursive;
+}
+
+a{
+  text-decoration: none;
+}
+/* GESTIONE DELLA NAVBAR */
+
+.navbar {
+  color: white;
+  background-color: rgba(70,70,70,0.8);
+  padding-top: 20px;
+  height: 10vh;
+  position: relative;
+}
+
+.navdescription, .about, .cerca{
+  font-size: 2rem;
+}
+
+nav > h1{
+  margin-left: 50px;
+  display: inline-block;
+}
+.cerca{
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  right: 250px;
+}
+.about{
+  color: white;
+
+  text-decoration: none;
+  position: absolute;
+  right: 100px;  
+}
+/* FINE NAVBAR */
+
+.search{
+  font-size: 5em;
+  position:absolute;
+  right: 16vw;
+  top: 28vh;
+  color: rgb(0, 57, 92);
+}
+
+@media (max-width: 500px){
+  .search{
+    font-size: 3em;
+    position:absolute;
+    right: 16vw;
+    top: 28vh;
+    color: rgb(0, 57, 92);
+  }
+
+  body{
+
+    background-image: url("../img/sfondoPiccolo2.jpg");
+    background-size:cover;
+    /* background-position-y: 35px;
+    background-position-x: -120px; */
+  }
+
+  .cerca, .about, .search, .navbar{
+    display: none;
+  }
+
+  #ingressoPiccolo{
+    border: none;
+    height: 16vh;
+    width: 100vw;
+    background:inherit;
+    position: absolute;
+    top: 40px;    
+  }
+
+}

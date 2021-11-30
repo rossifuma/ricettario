@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <title>Ricettario</title>
+
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <h1 class="navdescription">Benvenuta Veronica</h1>
+    <a class="about" href="">Chi sono</a>
+    <!-- <a class="cerca" href="">Cerca</a> -->
+  </nav>
+
+  <main>
+    <a href="./cerca.html" class="search">Cerca</a>
+    <button id="ingressoPiccolo"></button>
+  </main>
+
+
+
+
+  <script>
+    document.getElementById("ingressoPiccolo").addEventListener("click", () => {
+      window.location.replace("./cerca.html");
+    });
+
+  </script>
+
+</body>
+
+</html>
