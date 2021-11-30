@@ -13,11 +13,11 @@
     <a class="navdescription" href="./cerca.html">Torna indietro</a>
     <h1>Aggiungi ricetta!!</h1>
 
-
+    <!-- TIPO DEVE DIVENTARE UNA CHECKBOX -->
     <!-- DA INDICARE A CHI MANDARE I DATI -->
     <form class="" action="insert.php" method="post">
         <input type="text" name="nome" placeholder="Inserisci il nome della ricetta">
-        <input type="text" name="tipo" placeholder="Inserisci il tipo del pasto, colazione, pranzo, cena">
+        <!-- <input type="text" name="tipo[]" placeholder="Inserisci il tipo del pasto, colazione, pranzo, cena"> -->
         <input type="text" name="difficolta" placeholder="Difficoltà da 1 a 10">
         <input type="textarea" name="descrizione" placeholder="Descrizione della ricetta">
         <input type="text" name="daservire" placeholder="in che modo va servita (caldo o freddo)">
@@ -26,14 +26,36 @@
         <input type="submit" name="" value="INVIA I DATI">
         <div id="newPass"></div>
         <div id="newIn"></div>
+        <div id="newType"></div>
+
     </form>
     <button id="btn">Nuovo Ingrediente</button>
     <button id="btnPass">Nuovo Passaggio</button>
+    <button id="btnType">Altro Tipo</button>
+
 
 
 
 
     <script>
+        let contType = 0;
+        document.getElementById("btnType").addEventListener("click", () => {
+            let dad = document.getElementById("newType");
+            contType += 1;
+            generaType(contType);
+        });
+
+
+        function generaType(contType) {
+            let nomeType = document.createElement("input");
+            nomeType.setAttribute("type", "text");
+            nomeType.setAttribute("name", `tipo[]`);
+            nomeType.setAttribute("placeholder", `tipo numero ${contType}`);
+            document.getElementById("newType").appendChild(nomeType);
+
+        }
+
+
         let cont = 0;
         document.getElementById("btn").addEventListener("click", () => {
             let dad = document.getElementById("newIn");

@@ -13,6 +13,6 @@
         $collection->insertOne($row); //INSERIMENTO OGGETTO NEL DB
     }
     header('Location: ./cerca.html');
-
+    exit;
     // AGGIUNGERE IL CONTROLLO SULL'ESISTENZA DELLA RICETTA PRIMA DI INSERIRLA
 ?>
