@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+img {
+    margin: 2vh;
+    max-width: 40vw;
+    /* max-height: 60vh; */
+    float: left;
+    border-radius: 30px;
+}
+
+.title{
+    font-size: calc(1em + 5vw);
+    text-align: center;
+}
+
+.difficulty, .daServire, .tipo{
+    font-size: calc(1em + 2vw);
+    margin-top: 4vh;
+}
+
+@media (max-width: 500px){
+    img {
+        max-width: 90vw;
+    }
+    .difficulty, .daServire, .tipo{
+        margin: 0;
+        text-align: center;
+    }    
+
+}
