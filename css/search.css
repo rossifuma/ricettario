@@ -6,6 +6,10 @@
 
 }
 
+body{
+    background: rgba(30,30,30,0.2);
+}
+
 .navbar {
     color: white;
     background-color: rgba(70, 70, 70, 0.8);

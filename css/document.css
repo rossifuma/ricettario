@@ -5,15 +5,41 @@
     font-family: 'Dancing Script', cursive;
 }
 
+body{
+    background: rgba(30,30,30,0.2);
+}
+
+.navbar {
+    color: white;
+    background-color: rgba(70, 70, 70, 0.8);
+    padding-top: 20px;
+    height: 10vh;
+    position: relative;
+}
+h1.navdescription{
+    width: 300px;   
+    display: inline-block; 
+}
+.navdescription, .about{
+    font-size: 2rem;
+}
+.about{
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    right: 100px;  
+  }
+
 .clearfix::after {
     content: "";
     clear: both;
     display: table;
   }
 
-
 img {
-    margin: 2vh;
+    margin-top: 2vh;
+    margin-left: 5vw;
+    margin-right: 2vw;
     max-width: 40vw;
     /* max-height: 60vh; */
     float: left;
@@ -30,7 +56,78 @@ img {
     margin-top: 4vh;
 }
 
+.containerIngredients, .containerProcedimento{
+    width: 90vw;
+    margin-left: 5vw;
+}
+
+.flexContainer.ingrCont{
+    flex-direction: row;
+}
+
+.flexContainer.proc{
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: justify;
+}
+
+.flexContainer{
+    /* height: 50vh; */
+    padding: 20px;
+    background: rgba(240,240,240,1);
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-position:inside;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    font-size: calc(0.3em + 2vw);
+    list-style-type: none;
+}
+
+.puntoElenco{
+    font-family: initial;
+    font-style:oblique;
+    font-size: 1.3em;
+    margin-right: 6px;
+}
+
+.ingr{
+    width: 33%;
+}
+
+
+.procTitle{
+    margin-top: 10px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: calc(0.3em + 4vw);
+    background: rgba(240,240,240,1);
+}
+
+
+
+.ingrTitle{
+    margin-top: 10px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: calc(0.3em + 4vw);
+    background: rgba(240,240,240,1);
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 @media (max-width: 500px){
+    h1.navdescription{
+        display: none;
+    
+    }
+    
     img {
         max-width: 90vw;
     }
@@ -38,5 +135,9 @@ img {
         margin: 0;
         text-align: center;
     }    
+
+    .ingr{
+        width: 50%;
+    }
 
 }

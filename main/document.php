@@ -16,12 +16,43 @@
 
 <body>
 
+    <!-- INIZIO NAVBAR -->
+    <nav class="navbar">
+        <h1 class="navdescription">Benvenuta Veronica</h1>
+        <a class="about" href="./cerca.html">Torna indietro</a>
+    </nav>
+    <!-- FINE NAVBAR -->
 
+    <!-- PARTE ALTA CON FOTO, TITOLO E DIFFICOLTÀ -->
     <div id="container">
         <div class="product clearfix"></div>
     </div>
+    <!-- FINE DELLA PARTE ALTA -->
     <hr>
-    <div class ="containerIngredients"></div>
+
+
+    <div class="main">
+
+
+        <div class="containerIngredients">
+            <!-- <div class="ingrTitle">Ingredienti per <span>5</span> persone:</div> -->
+            <!-- <ul class="flexContainer ingrCont"> -->
+            <!-- <li class="ingr"><span class="puntoElenco">&#8226;</span><span>Ingrediente</span><span> Qta</span><span> Misura</span></li> -->
+            </ul>
+        </div>
+
+
+        <div class="containerProcedimento">
+            <div class="procTitle">Procedimento:</div>
+            <ul class="flexContainer proc">
+                <!-- <span><span class="puntoElenco">&#8226;</span> -->
+                <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit officiis earum eveniet illo, placeat ad deleniti quibusdam itaque recusandae eos ipsum suscipit pariatur perferendis hic!</span> -->
+
+            </ul>
+        </div>
+
+    </div>
+
 
 
 
@@ -53,86 +84,26 @@
         };
     }
     ?>
+
     <script>
         let data = <?php echo json_encode($array) ?>;
-        console.log(data[0]);
-        let ingredienti = [];
-        let passaggi = [];
-        contIngrediente = 1;
-        contPassaggi = 1;
-        let tipi = [];
-        for (key in data[0]) {
-            if (key === `Ingrediente${contIngrediente}`) {
-                contIngrediente++;
-                ingredienti.push(data[0][key]);
-            }
-            if (key === 'procedimento') {
-                for (chiave in data[0].procedimento) {
-                    if (chiave === `passaggio${contPassaggi}`) {
-                        contPassaggi++;
-                        passaggi.push(data[0][key][chiave]);
-                    }
-                }
-            }
-            if (key === 'tipo') {
-                if (typeof(data[0][key]) === "string") {
-                    tipi = data[0][key];
-                } else {
-                    tipi = [];
-                    for (let x = 0; x < data[0][key].length; x++) {
-                        tipi.push(data[0][key][x]);
-                    }
-                }
-            }
-        }
+    </script>
+    <script src="./js/dataRecord.js"></script>
+    <script src="./js/pushStringIntoDom.js"></script>
+    <script src="./js/pushIngredients.js"></script>
+    <script src="./js/pushProcedure.js"></script>
+    <script>
         // console.log(`ci sono ${contIngrediente-1} ingredienti`);
         // console.log(`ci sono ${contPassaggi-1} Passaggi`);
-        console.log(ingredienti);
         // console.log(passaggi);
+        // console.log(data[0]);
+        // let title = document.createElement("div");
+        // title.setAttribute("class", "title");
+        // title.innerHTML = `${data[0].nome}`;
+        // document.getElementsByClassName("product")[0].appendChild(title);
 
-        let img = document.createElement("img");
-        img.setAttribute("src", "https://images.fidhouse.com/fidelitynews/wp-content/uploads/sites/6/2017/10/1506930784_e0b6a6d14738441ee100b310b9ca8140b736f07c-1506790451.jpg");
-        document.getElementsByClassName("product")[0].appendChild(img);
 
-        let title = document.createElement("div");
-        title.setAttribute("class", "title");
-        title.innerHTML = `${data[0].nome}`;
-        document.getElementsByClassName("product")[0].appendChild(title);
-
-        let difficulty = document.createElement("div");
-        let string = "&#9733;".repeat(data[0].difficolta);
-        let string2 = "";
-        if (data[0].difficolta < "3") {
-            string2 = "facile";
-        } else if (data[0].difficolta === "3") {
-            string2 = "medio";
-        } else if (data[0].difficolta > "3") {
-            string2 = "difficile";
-        }
-        difficulty.setAttribute("class", "difficulty");
-        difficulty.innerHTML = `Difficoltà : ${string2}   ${string}`;
-        document.getElementsByClassName("product")[0].appendChild(difficulty);
-
-        let daServire = document.createElement("div");
-        daServire.setAttribute("class", "daServire");
-        daServire.innerHTML = `Da servire: ${data[0].daservire}`;
-        document.getElementsByClassName("product")[0].appendChild(daServire);
-
-        let tipo = document.createElement("div");
-        tipo.setAttribute("class", "tipo");
-        let stringTipo = "";
-        if (typeof(tipi) === "string") {
-            stringTipo = tipi;
-        } else {
-            for (let ind = 0; ind < tipi.length; ind++) {
-                stringTipo += tipi[ind]
-                if (ind < tipi.length - 1) {
-                    stringTipo += ", "
-                }
-            }
-        }
-        tipo.innerHTML = `Ideale per : ${stringTipo}`;
-        document.getElementsByClassName("product")[0].appendChild(tipo);
+        
     </script>
 
 

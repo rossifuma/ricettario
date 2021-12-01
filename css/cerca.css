@@ -6,7 +6,8 @@
 
 }
 body{
-  background: radial-gradient(circle, rgba(8,148,196,1) 0%, rgba(226,224,255,1) 47%, rgba(138,235,255,1) 100%);
+  background: rgba(30,30,30,0.2);
+  /* background: radial-gradient(circle, rgba(8,148,196,1) 0%, rgba(226,224,255,1) 47%, rgba(138,235,255,1) 100%); */
 
 }
 
