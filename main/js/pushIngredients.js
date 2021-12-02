@@ -24,15 +24,15 @@ for (let ind = 0; ind < ingredienti.length; ind++) {
     spanIngr.innerHTML = " " + ingredienti[ind].nomeIngr;
     document.getElementsByClassName("ingr")[ind].appendChild(spanIngr);
 
-    let spanQta = document.createElement("span");
-    spanQta.setAttribute("class", "spanQta");
-    spanQta.innerHTML = " " + ingredienti[ind].qta;
-    document.getElementsByClassName("ingr")[ind].appendChild(spanQta);
+    // let spanQta = document.createElement("span");
+    // spanQta.setAttribute("class", "spanQta");
+    // spanQta.innerHTML = " " + ingredienti[ind].qta;
+    // document.getElementsByClassName("ingr")[ind].appendChild(spanQta);
 
-    let spanMis = document.createElement("span");
-    spanMis.setAttribute("class", "spanMis");
-    spanMis.innerHTML = " " + ingredienti[ind].unitqta;
-    document.getElementsByClassName("ingr")[ind].appendChild(spanMis);
+    // let spanMis = document.createElement("span");
+    // spanMis.setAttribute("class", "spanMis");
+    // spanMis.innerHTML = " " + ingredienti[ind].unitqta;
+    // document.getElementsByClassName("ingr")[ind].appendChild(spanMis);
 
     // console.log(ingredienti[ind].nomeIngr);
 }

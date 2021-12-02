@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+}
+
+body {
+    background: rgba(30, 30, 30, 0.2);
+
+}
+
+.navbar {
+    color: white;
+    background-color: rgba(70, 70, 70, 0.8);
+    padding-top: 20px;
+    height: 10vh;
+    position: relative;
+}
+
+h1.navdescription {
+    width: 300px;
+    display: inline-block;
+}
+
+.navdescription, .about {
+    font-size: 2rem;
+}
+
+.about {
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    right: 100px;
+}
+
+.new {
+    text-align: center;
+    font-size: calc(1em + 4vw);
+}
+
+.containerDettagli{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: auto;
+    width: 60vw;
+    background: rgba(70, 70, 70, 0.8);
+    border-radius: 20px;
+}
+
+.containerSec {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: auto;
+    width: 60vw;
+    background: rgba(70, 70, 70, 0.8);
+    border-radius: 20px;
+}
+
+.containerDettagli > input{
+    margin: auto;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    padding: 30px;
+    border-radius: 20px;
+    width: 80%;
+    height: 5vh;
+    font-size: 2.3em;
+    /* text-align: 20px; */
+}
+
+.containerSec > div{
+    width: 100%;
+}
+.containerSec input{
+    height: 5vh;
+    padding: 30px;
+    border-radius: 20px;
+    font-size: 2.3em;
+}
+
+.nomeIngr{
+    margin-left: 10%;
+    margin-top: 1vh;
+    width: 80%;
+}
+
+#addIngredient{
+    width: 50px !important;
+    height: 50px;
+    background-image: url("../img/addButton.png");
+    background-size: contain;
+    position: relative;
+    left: 82%;
+    bottom: 57px;
+}
+
+#deleteIngredient{
+    width: 40px !important;
+    height: 50px;
+    background-image: url("../img/deleteButton.png");
+    background-size: contain;
+    position: relative;
+    left: 85%;
+    bottom: 57px;
+}
+
+@media (max-width: 500px) {
+    h1.navdescription {
+        display: none;
+
+    }
+
+}

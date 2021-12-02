@@ -92,21 +92,6 @@
     <script src="./js/pushStringIntoDom.js"></script>
     <script src="./js/pushIngredients.js"></script>
     <script src="./js/pushProcedure.js"></script>
-    <script>
-        // console.log(`ci sono ${contIngrediente-1} ingredienti`);
-        // console.log(`ci sono ${contPassaggi-1} Passaggi`);
-        // console.log(passaggi);
-        // console.log(data[0]);
-        // let title = document.createElement("div");
-        // title.setAttribute("class", "title");
-        // title.innerHTML = `${data[0].nome}`;
-        // document.getElementsByClassName("product")[0].appendChild(title);
-
-
-        
-    </script>
-
-
 </body>
 
 </html>
