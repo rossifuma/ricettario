@@ -20,89 +20,58 @@
         <a class="about" href="./cerca.html">Torna indietro</a>
     </nav>
 
+    <div id="unicorno"></div>
 
-
-    <h1 class="new">Dettagli ricetta!!</h1>
+    <h1 class="new">Dettagli ricetta</h1>
 
     <!-- TIPO DEVE DIVENTARE UNA CHECKBOX -->
     <!-- DA INDICARE A CHI MANDARE I DATI -->
     <form class="" action="insert.php" method="post">
         <div class="containerDettagli">
-            <input type="text" name="nome" placeholder="Nome della ricetta">
-            <input type="text" name="difficolta" placeholder="Difficoltà:           MIN => 1         MAX => 5">
-            <input type="text" name="qtaPersone" placeholder="Ricetta per quante persone?">
+            <input type="text" name="nome" placeholder="Nome della ricetta" required>
+            <input type="text" name="difficolta" placeholder="Difficoltà:           MIN => 1         MAX => 5" required>
+            <input type="text" name="qtaPersone" placeholder="Ricetta per quante persone?" required>
             <input type="textarea" name="descrizione" placeholder="Descrizione della ricetta            **Opzionale">
-            <input type="text" name="daservire" placeholder="in che modo va servita (caldo o freddo)">
+            <input type="text" name="daservire" placeholder="In che modo va servita (caldo/freddo/indifferente)" required>
+            <input type="text" name="dataCreazione" style="display: none;">
             <div id="newType"></div>
         </div>
 
         <h1 class="new">Ingredienti ricetta</h1>
         <div class="containerSec">
-            
             <div id="newIn"></div>
             <div id="addIngredient"></div>
             <div id="deleteIngredient"></div>
-            
-            <div id="newPass"></div>
-            
-            <input type="submit" value="Crea">
-
         </div>
+        <h1 class="new">Passaggi ricetta</h1>
+
+        <div class="containerSec">
+            <div id="newPass"></div>
+            <div id="addPassage"></div>
+            <div id="deletePassage"></div>
+        </div>
+        <input id="crea" type="submit" value="Crea">
+
     </form>
+
+    <div id="prova"></div>
     <!-- <button id="btn">Nuovo Ingrediente</button> -->
-    <button id="btnPass">Nuovo Passaggio</button>
-
-
-
-
 
     <script src="./js/pushTipoRicetta.js"></script>
+    <script src="./js/generaIngredienteDOM.js"></script>
+    <script src="./js/generaPassaggioDOM.js"></script>
+
     <script>
-         
-        // GENERAZIONE PRIMO INGREDIENTE
-        let cont = 0;
-        generaIngrediente(cont + 1);
-        cont++;
-        document.getElementById("addIngredient").addEventListener("click", () => {
-            let dad = document.getElementById("newIn");
-            cont += 1;
-            generaIngrediente(cont);
-        });
+        // PULSANTE SUBMIT RIMANDATO;
+        document.getElementById("prova").addEventListener("click", ()=>{
+            let data = new Date().toLocaleDateString();
+            let dataCreazione = document.getElementsByName("dataCreazione")[0];
+            dataCreazione.value = data;
+            document.getElementById("crea").click();
 
-
-        let contPass = 0;
-        document.getElementById("btnPass").addEventListener("click", () => {
-            let dad = document.getElementById("newPass");
-            contPass += 1;
-            generaPassaggio(contPass);
-        });
-
-        function generaPassaggio(contPass) {
-
-            let nomePass = document.createElement("input");
-            nomePass.setAttribute("type", "text");
-            nomePass.setAttribute("name", `procedimento[passaggio${contPass}]`);
-            nomePass.setAttribute("placeholder", `Passaggio numero ${contPass}`);
-            document.getElementById("newPass").appendChild(nomePass);
-        }
-
-
-        function generaIngrediente(cont) {
-
-            let nomeIngr = document.createElement("input");
-            nomeIngr.setAttribute("type", "text");
-            nomeIngr.setAttribute("class","nomeIngr");
-            nomeIngr.setAttribute("name", `Ingrediente${cont}[nomeIngr]`);
-            nomeIngr.setAttribute("placeholder", `Ingriente numero ${cont}`);
-            document.getElementById("newIn").appendChild(nomeIngr);
-
-
-            
-        }
+        })
     </script>
-
-
-
+    
 
 </body>
 

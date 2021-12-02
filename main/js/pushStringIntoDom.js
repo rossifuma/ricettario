@@ -1,9 +1,13 @@
 // Inserimento dei dati presi da DB nel DOM
 
 
+// pathImg = `../img/${data[0].nome}.${ext}`;
+let pathImg = `../img/product/${data[0].nome}.jpg`;
+
+
 let img = document.createElement("img");
 // img.setAttribute("src", "https://images.fidhouse.com/fidelitynews/wp-content/uploads/sites/6/2017/10/1506930784_e0b6a6d14738441ee100b310b9ca8140b736f07c-1506790451.jpg");
-img.setAttribute("src", "../img/caffelatte.jpg");
+img.setAttribute("src", `${pathImg}`);
 document.getElementsByClassName("product")[0].appendChild(img);
 
 let title = document.createElement("div");
@@ -27,7 +31,12 @@ document.getElementsByClassName("product")[0].appendChild(difficulty);
 
 let daServire = document.createElement("div");
 daServire.setAttribute("class", "daServire");
-daServire.innerHTML = `Da servire: ${data[0].daservire}`;
+if (data[0].daservire === "indifferente") {
+    daServire.innerHTML = `Da servire: sia caldo che freddo`;
+} else {
+    daServire.innerHTML = `Da servire: ${data[0].daservire}`;
+
+}
 document.getElementsByClassName("product")[0].appendChild(daServire);
 
 let tipo = document.createElement("div");

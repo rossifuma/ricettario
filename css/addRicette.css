@@ -7,6 +7,7 @@
 
 body {
     background: rgba(30, 30, 30, 0.2);
+    /* background-image: url("../img/unicorno.jpg"); */
 
 }
 
@@ -39,6 +40,8 @@ h1.navdescription {
     font-size: calc(1em + 4vw);
 }
 
+
+
 .containerDettagli{
     display: flex;
     flex-wrap: wrap;
@@ -49,7 +52,7 @@ h1.navdescription {
     border-radius: 20px;
 }
 
-.containerSec {
+.containerSec{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -71,6 +74,7 @@ h1.navdescription {
     /* text-align: 20px; */
 }
 
+
 .containerSec > div{
     width: 100%;
 }
@@ -81,32 +85,44 @@ h1.navdescription {
     font-size: 2.3em;
 }
 
-.nomeIngr{
+.nomeIngr, .nomePass{
     margin-left: 10%;
     margin-top: 1vh;
     width: 80%;
 }
 
-#addIngredient{
+#addIngredient, #addPassage{
     width: 50px !important;
     height: 50px;
     background-image: url("../img/addButton.png");
     background-size: contain;
     position: relative;
-    left: 82%;
+    left: 84%;
     bottom: 57px;
 }
 
-#deleteIngredient{
+#deleteIngredient, #deletePassage{
     width: 40px !important;
     height: 50px;
     background-image: url("../img/deleteButton.png");
     background-size: contain;
     position: relative;
-    left: 85%;
+    left: 86%;
     bottom: 57px;
 }
 
+#prova{
+    background-image: url("../img/submit.png");
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 100px;
+    top:330px;
+}
+#crea{
+    display: none;
+}
 @media (max-width: 500px) {
     h1.navdescription {
         display: none;
